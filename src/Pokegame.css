@@ -1,0 +1,18 @@
+.Pokegame-totalExp {
+  color: red;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.Pokegame-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.Pokegame-hand-name {
+  text-align: center;
+}

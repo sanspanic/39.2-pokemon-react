@@ -9,6 +9,8 @@
   flex-flow: column wrap;
   align-items: center;
   margin: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
   border-radius: 10px;
   padding-bottom: 18px;
   transition: 0.5s all;
