@@ -1,0 +1,4 @@
+.Pokedex-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
