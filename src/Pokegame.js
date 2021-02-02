@@ -4,10 +4,8 @@ import "./Pokegame.css"
 
 const Pokegame = ({pokemon}) => {
 
-    let hand1 = pokemon.slice(0, 4); 
-    let hand2 = pokemon.slice(4);
- 
-/*  why does below approach not work?
+    //props are immutable: making copyt first before manipulating
+    const pokemonCopy = [...pokemon]
 
     let hand1 = [];
     let hand2 = [];
@@ -15,16 +13,16 @@ const Pokegame = ({pokemon}) => {
     
      while (hand1.length !== 4) {
 
-        randIdx = Math.floor(Math.random() * pokemon.length)
-        let removed = pokemon.splice(randIdx, 1)
+        randIdx = Math.floor(Math.random() * pokemonCopy.length)
+        let removed = pokemonCopy.splice(randIdx, 1)
         hand1.push(removed[0])
 
-        randIdx = Math.floor(Math.random() * pokemon.length)
-        let removed2 = pokemon.splice(randIdx, 1)
+        randIdx = Math.floor(Math.random() * pokemonCopy.length)
+        let removed2 = pokemonCopy.splice(randIdx, 1)
         hand2.push(removed2[0])
 
-    } 
- */
+     }
+
     const totalExpHand1 = hand1.reduce((acc, p) => {
         return acc + p.base_experience
     }, 0)
